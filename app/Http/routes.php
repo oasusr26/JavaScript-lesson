@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/', 'JsController@index');
+Route::resource('js', 'JsController');
