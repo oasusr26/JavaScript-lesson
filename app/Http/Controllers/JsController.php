@@ -30,7 +30,9 @@ class JsController extends Controller
      */
     public function create()
     {
-        //
+        $jstest = new js();
+        
+        return view('Jsfiles.create', ['jstest' => $jstest]);
     }
 
     /**
