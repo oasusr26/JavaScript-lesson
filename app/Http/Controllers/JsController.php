@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+use App\js;
+
 class JsController extends Controller
 {
     /**
@@ -16,7 +18,9 @@ class JsController extends Controller
      */
     public function index()
     {
-        //
+        $jstests = js::all();
+        
+        return view('Jsfiles.index', ['jstests' => $jstests]);
     }
 
     /**

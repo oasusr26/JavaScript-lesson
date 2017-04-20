@@ -5,6 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>JavaScript lesson</title>
+        <link rel="stylesheet" href="/css/style.css">
         <!-- Bootstrap -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script type="text/javascript" src="/js/script.js"></script>
@@ -14,8 +15,15 @@
         <![endif]-->
     </head>
     <body>
-        
-        @yield('content')
+        <div id="header">@include('commons.navbar')</div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-2 hidden-xs" style="background: plum;">sidebar-left</div>
+                <div class="col-sm-8 col-xs-12">@yield('content')</div>
+                <div class="col-sm-2 col-xs-12" style="background: skyblue;" >sidebar-right</div>
+            </div>
+        </div>
+        <div id="footer">@include('commons.footer')</div>
 
 
 
